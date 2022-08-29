@@ -24,11 +24,10 @@ class _NoteableEventCardState extends State<NoteableEventCard> {
     return FutureBuilder<List<Events>>(
         future: _getEventsForToday(),
         builder: (context, snapshot) {
-          if (snapshot.hasData) {
+          if (snapshot.hasData && snapshot.data!.isNotEmpty) {
             return BaseCard(
               cardWidth: 250,
               title: 'Noteable Events Today',
-              // title: snapshot.data!.first.title,
               child: _buildEventCard(snapshot.data!.first),
             );
           } else {
