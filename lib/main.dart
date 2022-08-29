@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:roomie/widgets/clock.dart';
+import 'package:roomie/widgets/clock_card.dart';
+import 'package:roomie/widgets/noteable_event_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[Clock()],
+          children: const <Widget>[ClockCard(), NoteableEventCard()],
         ),
       ),
     );
