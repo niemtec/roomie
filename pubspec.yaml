@@ -1,5 +1,9 @@
 name: roomie
 description: Experiments with smart dashboards
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 environment:
@@ -20,10 +24,10 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "./icon.png"
+  image_path: "./assets/icon.png"
   web:
     generate: true
-    image_path: "./icon.png"
+    image_path: "./assets/icon.png"
     background_color: "#ffffff"
     theme_color: "#9C28B0"
   windows:

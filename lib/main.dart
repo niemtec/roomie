@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Roomie',
       theme: ThemeData(
-          primarySwatch: Colors.purple,
+          primarySwatch: Colors.amber,
           cardTheme: CardTheme(
               elevation: 3,
               shape: RoundedRectangleBorder(
@@ -42,7 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Row(
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: Image.asset('assets/icon_grey.png', fit: BoxFit.cover)),
+            Text(widget.title),
+          ],
+        ),
       ),
       body: Center(
         child: Column(
