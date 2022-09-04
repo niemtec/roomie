@@ -33,7 +33,7 @@ jobs:
       run: flutter packages get
       
     - name: Build web
-      run: flutter build web
+      run: flutter build web --release --base-href '/roomie/'
       
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
