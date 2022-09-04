@@ -1,6 +1,6 @@
 name: Build and Publish Flutter Web to GitHub Pages
 on: 
-  workflow_run:
+  workflow_dispatch:
   push:
     branches: [main]
 jobs:
