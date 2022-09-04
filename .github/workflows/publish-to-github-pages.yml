@@ -13,4 +13,3 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /roomie/
-          workingDir: /docs
