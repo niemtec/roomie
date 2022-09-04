@@ -2,20 +2,15 @@ name: Build and Publish Flutter Web to GitHub Pages
 on: 
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, master]
 jobs:
   build:
-    name: Build Flutter Web App
-    env:
-      my_secret: ${{secrets.commit_secret}}
+    name: Build Web App
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
-        with:
-          channel: beta
-      - run: flutter config --enable-web
-      - run: flutter pub get
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /roomie/
+          workingDir: /docs
