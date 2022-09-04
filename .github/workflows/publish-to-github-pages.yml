@@ -1,11 +1,11 @@
-name: Flutter Web
+name: Build and Publish Flutter Web to GitHub Pages
 on:
   push:
     branches:
       - main
 jobs:
   build:
-    name: Build Web
+    name: Build Flutter Web App
     env:
       my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
